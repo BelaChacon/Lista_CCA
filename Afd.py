@@ -32,6 +32,6 @@ strings = ['110', '101', '1000', '1111', '001', '000', '1', '0']
 
 for string in strings:
     if afd.reconhece(string):
-        print(f"A cadeia '{string}' foi aceita.")
+        print(f"A string '{string}' foi aceita.")
     else:
-        print(f"A cadeia '{string}' foi rejeitada.")
+        print(f"A string '{string}' foi rejeitada.")
