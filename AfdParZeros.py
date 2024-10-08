@@ -18,11 +18,10 @@ class AfdParZeros:
     
     def reconhece(self, string):
         self.estado_atual = 'q0'
-        #Percorre cada caractere da string
+    
         for char in string:
             self.transicao(char)
-        
-        #Verifica se terminou no estado de aceitação (q0)
+            
         return self.estado_atual == "q0"
 
 afd = AfdParZeros()
@@ -32,4 +31,4 @@ strings = ['1010', '110011', '000', '111', '010101']
 
 for string in strings:
     resultado = afd.reconhece(string)
-    print(f"A string '{string}' possui número par de zeros?: {resultado}")
+    print(f"A string '{string}' possui número par de zeros? {resultado}")
