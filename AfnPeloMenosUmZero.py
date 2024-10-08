@@ -32,4 +32,4 @@ strings = ['1', '0', '11', '01', '10', '00', '111', '0101', '0001', '']
 
 for string in strings:
     resultado = afn.reconhece(string)
-    print(f"A string '{string}' possui pelo menos um zero?: {resultado}")
+    print(f"A string '{string}' possui pelo menos um zero? {resultado}")
