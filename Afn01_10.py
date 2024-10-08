@@ -42,4 +42,4 @@ strings = ['010', '0110', '0101', '1010', '01ab10', '011010', '0010', '01', '10'
 
 for string in strings:
     resultado = afn.reconhece(string)
-    print(f"A string '{string}' possui 01 no início e 10 no final?: {resultado}")
+    print(f"A string '{string}' possui 01 no início e 10 no final? {resultado}")
