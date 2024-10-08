@@ -36,4 +36,4 @@ strings = ['0', '00', '000', '0000', '00000', '000000', '111', '010101', '001100
 
 for string in strings:
     resultado = afn.reconhece(string)
-    print(f"String '{string}' é aceita pelo AFN: {resultado}")
+    print(f"A string '{string}' possui uma quantidade de zeros divisivel por três? {resultado}")
