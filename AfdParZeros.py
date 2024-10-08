@@ -17,6 +17,7 @@ class AfdParZeros:
                 self.estado_atual = "q1"
     
     def reconhece(self, string):
+        self.estado_atual = 'q0'
         #Percorre cada caractere da string
         for char in string:
             self.transicao(char)
