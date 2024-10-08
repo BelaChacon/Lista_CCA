@@ -38,4 +38,4 @@ strings = ['1010', '1100', '111', '10001', '010', '11111']
 
 for string in strings:
     resultado = afd.reconhece(string)
-    print(f"A string '{string}' possui dois números 1?: {resultado}")
+    print(f"A string '{string}' possui dois números 1? {resultado}")
