@@ -27,8 +27,8 @@ class AfdParZeros:
 afd = AfdParZeros()
 
 #Teste
-strings_teste = ['1010', '110011', '000', '111', '010101']
+strings = ['1010', '110011', '000', '111', '010101']
 
-for s in strings_teste:
-    resultado = afd.reconhece(s)
-    print(f"A string '{s}' possui número par de zeros?: {resultado}")
+for string in strings:
+    resultado = afd.reconhece(string)
+    print(f"A string '{string}' possui número par de zeros?: {resultado}")
