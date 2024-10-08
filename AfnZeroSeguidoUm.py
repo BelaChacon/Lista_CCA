@@ -2,9 +2,8 @@
 
 class AfnZeroSeguidoUm:
     def __init__(self):
-        self.estado_inicial = 'q0'  #Estado inicial
-        self.estado_aceitacao = 'q2'  #Estado de aceitação
-        self.estado_atual = self.estado_inicial  
+        self.estado_atual = 'q0'  #Estado inicial
+        self.estado_aceitacao = 'q2'  #Estado de aceitação  
     
     def transicao(self, char):
         if self.estado_atual == 'q0':
@@ -19,10 +18,11 @@ class AfnZeroSeguidoUm:
             pass 
 
     def reconhece(self, string):
-        self.estado_atual = self.estado_inicial  
+        self.estado_atual = 'q0'  
         for char in string:
             self.transicao(char)
-        return self.estado_atual == self.estado_aceitacao
+            
+        return self.estado_atual in self.estado_aceitacao
 
 afn = AfnZeroSeguidoUm()
 
