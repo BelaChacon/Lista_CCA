@@ -2,28 +2,25 @@
 
 class AfnPeloMenosUmZero:
     def __init__(self):
-        self.estado_inicial = 'q0'
+        self.estado_atual = 'q0'
         self.estados_aceitacao = {'q1'}
-        self.estado_atual = {self.estado_inicial}
     
     def transicao(self, char):
-        novos_estados = set()
-        for estado in self.estado_atual:
-            if estado == 'q0':
-                if char == '0':
-                    novos_estados.add('q1')  
-                elif char == '1':
-                    novos_estados.add('q0')  
-            elif estado == 'q1':
-                novos_estados.add('q1') 
-        self.estado_atual = novos_estados
+        if self.estado_atual == 'q0':
+            if char == '0':
+                self.estado_atual = 'q1'
+            elif char == '1':
+                self.estado_atual = 'q0'
+        elif self.estado_atual == 'q1':
+            self.estado_atual = 'q1'
+
     
     def reconhece(self, string):
-        self.estado_atual = {self.estado_inicial}
+        self.estado_atual = 'q0'
         for char in string:
             self.transicao(char)
-        # Verifica se algum dos estados possíveis é um estado de aceitação
-        return any(estado in self.estados_aceitacao for estado in self.estado_atual)
+
+        return self.estado_atual in self.estados_aceitacao
 
 afn = AfnPeloMenosUmZero()
 
@@ -32,4 +29,4 @@ strings = ['1', '0', '11', '01', '10', '00', '111', '0101', '0001', '']
 
 for string in strings:
     resultado = afn.reconhece(string)
-    print(f"A string '{string}' possui pelo menos um zero? {resultado}")
+    print(f"A string '{string}' possui pelo menos um zero?: {resultado}")
