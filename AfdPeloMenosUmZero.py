@@ -28,4 +28,4 @@ strings = ['1010', '111', '000', '0111', '1', '']
 
 for string in strings:
     resultado = afd.reconhece(string)
-    print(f"A string '{string}' tem pelo menos um zero?: {resultado}")    
+    print(f"A string '{string}' tem pelo menos um zero? {resultado}")    
