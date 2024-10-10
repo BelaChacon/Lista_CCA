@@ -1,4 +1,4 @@
-#questão 16 da lista 
+# questão 16 da lista 
 
 class AfdBlocos0Consecutivos:
     
